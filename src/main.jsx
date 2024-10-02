@@ -7,7 +7,7 @@ import Layout from './components/layout.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 import './App.css'
 import User from './pages/user/user.jsx'
-import Github from './pages/Github/Github.jsx'
+import Github, { githubinfoLoder } from './pages/Github/Github.jsx'
 const router=createBrowserRouter([
  {
   path:"/",
@@ -30,6 +30,7 @@ const router=createBrowserRouter([
       element:<User/>
     },
     {
+      loader:githubinfoLoder,
       path:"github",
       element:<Github/>
     },
